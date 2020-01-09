@@ -9,7 +9,7 @@ function trial(L, D) {
     throw new Error("D must be >= L");
   }
 
-  // let our scale be +- 10 board widths to make the results interesting
+  // let our scale be +- 10 board widths
   const scale = 10 * D;
 
   // first we generate a random point A and a random slope m
@@ -34,12 +34,18 @@ function trial(L, D) {
 
   // naive iterate board widths, can be improved
   // it doesn't matter which end of the line is A or B as long as the length is L
-  const D2 = 2 * D;
-  const ax = Ax % D2;
-  const bx = Bx % D2;
 
-  // mod 2 D to check if D is in the middle, checking either order
-  return (ax < D && D < bx) || (bx < D && D < ax);
+  const min = Math.min(Ax, Bx);
+  const max = Math.max(Ax, Bx);
+  for (let x = 0; x < max; x += D) {
+    if (min < x && x < max) {
+      // console.log(min, "\t", x, "\t", max, "\t", true);
+      return true;
+    }
+  }
+
+  // console.log(min, "\t", "Dn", "\t", max, "\t", false);
+  return false;
 }
 
 function trials(L, D, trials) {
