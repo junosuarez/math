@@ -1,0 +1,108 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage[margin=1in]{geometry}
+\pagestyle{fancy}
+\setlength\headheight{28pt}
+\addtolength{\headheight}{\baselineskip}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\lhead{Math 251 - Shuichi Masuda\\Juno Suárez\\\today}
+\rfoot{Page \thepage \hspace{1pt} of \pageref{LastPage}}
+
+\renewcommand\thesubsection{\arabic{subsection}.}
+\renewcommand\thesubsubsection{\alph{subsubsection})}
+
+\begin{document}
+
+\section*{Computer Lab \# 2}
+
+\subsection{}
+For $$f(x) = \frac{sin(x)}{x}$$ $f(0)$ is not defined because $x$ appears in the
+denominator. Since $x = 0$ would result in division by zero, $0$ is not in the
+domain of $f(x)$, and $f(0)$ is not defined.
+
+\subsection{}
+\emph{Step performed in GeoGebra.}
+
+\subsection{}
+Graphically, $f(x)$ appears to approach $1$ at $x=0$. Intuitively, this seems right
+because $sin(x)$ is periodic and $sin(0)$ is a local minimum for the period.
+$sin(0)=0$, so values of $sin(x)$ near $sin(0)$ will be near 0, and
+$\frac{near k}{k} \approx 1$ for non-zero values of $k$.
+
+\subsection{} \label{numeric}
+Numeric evaluation of $f(x)$ for $x$ near $0$, rounded to 5 decimal digits:
+\\
+
+\begin{tabular}{rl}
+    $x$       & $f(x)$ \\
+    0.1     & 0.95885  \\
+    0.1     & 0.99833   \\
+    0.01    & 0.99980   \\
+    0.001   & 1.00000   \\
+    -0.001  & 1.00000  \\
+    -0.01   & 0.99980  \\
+    -0.1    & 0.99833  \\
+    -0.5    & 0.95885  \\
+\end{tabular}
+
+\subsection{}
+In the table from \#\ref{numeric}, the values of $f(x)$ for $x = \pm 0.001$ round
+to $1$ when rounded to 5 digits. This strongly supports our earlier conjecture that
+$f(0)$ appears to be $1$.
+
+\subsection{}
+Yes, the observations in \#3 and \#5 are consistent.
+
+\subsection{}
+Since the behavior of $f(x)$ for values of $x$ near 0 appears to approach 0 both
+graphically and numerically, it seems likely that $lim_{x \rightarrow 0} \frac{sin(x)}{x} = 0$.
+
+\subsection{}
+For the items in this section, I reused the graph and spreadsheet from steps \\
+\#2 – \#5. I added a column to the spreadsheet for the limit value of $x$ such
+that the values for $x$ would update to be values approaching the limit value of
+$x$, and the third column would update with the calculated values of $f(x)$ for
+each evaluated $x$.
+
+Further, I defined new functions e.g. $a(x) = ...$ and defined
+$f(x)=a(x)$, in an attempt to parameterize the function under investigation. I discovered
+that the input bar also allows $f(x)=a$ and even $f=a$. Thus, for each function, I was able to investigate it graphically and numerically simply by redefining $f$ in the graphical view and updating the limit value for $x$ in the spreadsheet view.
+
+If I were to continue improving the GeoGeobra environment for this investigation, I would like to graph a vertical line at the limit value of $x$ to better visualize the limit value of $f(x)$ at that point.
+
+\subsubsection{}
+\begin{flalign*} & \text{Conjecture: }
+  lim_{x \rightarrow 9} \frac{x-9}{\sqrt{x}-3} = 6
+& \end{flalign*}
+
+\subsubsection{}
+\begin{flalign*} & \text{Conjecture: }
+  lim_{x \rightarrow 4} x^2 = 16
+& \end{flalign*}
+
+\subsubsection{}
+\begin{flalign*} & \text{Conjecture: }
+  lim_{x \rightarrow 0} sin(\frac{1}{x}) = DNE
+& \end{flalign*}
+
+\subsubsection{}
+\begin{flalign*} & \text{Conjecture: }
+  lim_{x \rightarrow 0} \frac{x}{|x|} = DNE
+& \end{flalign*}
+
+\subsubsection{}
+\begin{flalign*} & \text{Conjecture: }
+  lim_{x \rightarrow -3} \frac{x-9}{\sqrt{x}-3} = 2
+& \end{flalign*}
+
+\subsubsection{}
+\begin{flalign*} & \text{Conjecture: }
+  lim_{x \rightarrow 2} \frac{1}{x-2} = DNE
+& \end{flalign*}
+
+
+\end{document}
