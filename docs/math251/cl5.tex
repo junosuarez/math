@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{tabstackengine}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\graphicspath{ {./} }
+\TABstackMath
+\TABbinary
+
+\pagestyle{fancy}
+\setlength\headheight{28pt}
+\addtolength{\headheight}{\baselineskip}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\lhead{Math 251 - Shuichi Masuda\\Juno Suárez\\\today}
+\rfoot{Page \thepage \hspace{1pt} of \pageref{LastPage}}
+
+\renewcommand\thesubsection{\arabic{subsection}.}
+\renewcommand\thesubsubsection{\alph{subsubsection})}
+
+\begin{document}
+
+\section*{Computer Lab \# 5}
+
+\setcounter{subsection}{7}
+\subsection{}
+Graphically, the points as I plotted them in \# 7 appear to be distributed linearly, rather than sinusoidally. The slopes change periodically (which we would expect for a trigonometric function), but the difference in the slopes as they approach the extrema appears to be linear, as plotted.
+If the points were distributed sinusoidally, it would mean that the absolute difference in the slopes decreases as it approaches the extrema.
+
+However, I have reason to be suspicious of this finding, since we know the derivative of
+ $\sin \theta$ is $\cos \theta$, and $\cos \theta$ is not a linear function.
+  Because the method for choosing $x$ values relied on graphically
+  estimating certain geometrically convenient slopes (0\textdegree, 30\textdegree, 45\textdegree, etc.), the
+  result is that the $x$ values chosen are not sufficiently close to the extrema to strongly
+  suggest either a linear or gradual behavior, when accounting for manual plotting error.
+
+\subsection{}
+The s-coordinates represent the slope of the tangent to the function $f(x)=\sin(x)$ at $x$, that is to say, the values of the derivative $f'(x)$ at $x$.
+
+\subsection{}
+The graph appears to be the function $\cos \theta$, supported by the fact that it appears to have period $2\pi$, a range of $[-1,1]$, and value of 1 at $x=0$.
+
+
+\end{document}
